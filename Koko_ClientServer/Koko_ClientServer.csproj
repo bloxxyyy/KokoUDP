@@ -1,14 +1,49 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
+    <IsPackable>true</IsPackable>
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <OutputType>Library</OutputType>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>Koko_ClientServer</Title>
+    <Description>
+      UPD connectionstream for multiplayer, send Networkobjects over json to clients.
+    </Description>
+    <PackageProjectUrl>https://github.com/bloxxyyy/KokoComponentManagementSystem</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/bloxxyyy/KokoComponentManagementSystem</RepositoryUrl>
+    <PackageTags>ECS</PackageTags>
+    <Copyright>https://github.com/bloxxyyy/KokoComponentManagementSystem/blob/master/LICENSE</Copyright>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <Version>$(VersionPrefix)</Version>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <VersionPrefix>1.0.0</VersionPrefix>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.7.1" />
+    <PackageReference Include="Moq" Version="4.18.4" />
+    <PackageReference Include="xunit" Version="2.4.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="coverlet.collector" Version="1.3.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
   </ItemGroup>
 
 </Project>

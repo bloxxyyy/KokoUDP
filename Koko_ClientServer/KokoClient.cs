@@ -8,14 +8,13 @@ public class KokoClient {
 
     public Action<List<NetworkComponent>>? HandleReceivedObjects { get; set; }
 
-    public void StartClient() {
-        IPAddress clientIp = IPAddress.Parse("127.0.0.1");
-        int clientPort = 4041;
-        IPEndPoint ipep = new(clientIp, clientPort);
+    public void StartClient(string clientIp, int clientPort, string serverIp, int serverPort) {
+        IPAddress cIp = IPAddress.Parse(clientIp);
+        IPEndPoint ipep = new(cIp, clientPort);
         UdpClient _UpdClient = new(ipep);
-        
-        
-        IPEndPoint server = new IPEndPoint(KokoServer.SERVERIP, KokoServer.SERVERPORT);
+
+        IPAddress sIp = IPAddress.Parse(serverIp);
+        IPEndPoint server = new IPEndPoint(sIp, serverPort);
         SendData(server, _UpdClient, "Hello, I am new!");
 
         while (true) {

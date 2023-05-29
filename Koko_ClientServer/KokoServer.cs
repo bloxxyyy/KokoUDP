@@ -1,23 +1,24 @@
 ﻿using System.Net;
 using System.Net.Sockets;
-using System.Reflection;
 using System.Text;
 using Newtonsoft.Json;
 
 namespace Koko_ClientServer;
 public class KokoServer {
 
-    public static IPAddress SERVERIP = IPAddress.Parse("127.0.0.1");
-    public static int SERVERPORT = 4040;
+    private IPAddress _ServerIp;
+    private int _ServerPort;
 
     private List<IPEndPoint> _Senders = new();
 
     private List<NetworkComponent> _NetworkComponents = new();
     int frameDelay = 1000 / 4; // 32 frames per second
 
-    public void StartServer(List<NetworkComponent>? networkComponents = null) {
+    public void StartServer(string ip, int port, List<NetworkComponent>? networkComponents = null) {
+        _ServerIp = IPAddress.Parse(ip);
+        _ServerPort = port;
         _NetworkComponents = networkComponents ?? new();
-        IPEndPoint ipep = new(SERVERIP, SERVERPORT);
+        IPEndPoint ipep = new(_ServerIp, _ServerPort);
         UdpClient _UpdServer = new(ipep);
 
         IPEndPoint anClientIp = new IPEndPoint(IPAddress.Any, 0);
