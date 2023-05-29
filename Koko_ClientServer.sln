@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33110.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Koko_ClientServer", "Koko_ClientServer\Koko_ClientServer.csproj", "{E61E2E7E-5317-49C1-AB94-D787EDEDD69C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E61E2E7E-5317-49C1-AB94-D787EDEDD69C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E61E2E7E-5317-49C1-AB94-D787EDEDD69C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E61E2E7E-5317-49C1-AB94-D787EDEDD69C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E61E2E7E-5317-49C1-AB94-D787EDEDD69C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AEC6DDE3-1DFA-41CF-88E0-019911FE21E1}
+	EndGlobalSection
+EndGlobal
